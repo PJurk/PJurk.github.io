@@ -1,0 +1,17 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      {{ site.title | default: site.github.repository_name | default: 'Studio Organic' }}
+    </div>
+
+    <div class="footer__links">
+      <a href="{{ 'https://github.com/PJurk' | escape }}">GitHub</a>
+      <a href="{{ '/kontakt/' | relative_url }}">Kontakt</a>
+      <a href="{{ '/portfolio/' | relative_url }}">Portfolio</a>
+    </div>
+
+    <div class="footer__meta">
+      © {{ 'now' | date: '%Y' }} {{ site.title | default: 'Patryk Jurk' }}.
+    </div>
+  </div>
+</footer>

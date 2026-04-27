@@ -1,0 +1,27 @@
+---
+description: GitHub Pages (Jekyll) project context + design spec location
+alwaysApply: true
+---
+
+# GitHub Pages + Jekyll (PJurk.github.io)
+
+## Project type
+- This repository is a **GitHub Pages** site, built with **Jekyll**.
+- Primary Jekyll configuration lives in `_config.yml`.
+- Ruby dependencies are managed via `Gemfile` (typically using the `github-pages` gem).
+
+## Content structure expectations
+- Prefer editing/adding site content using Jekyll-friendly files:
+  - Markdown pages (e.g. `index.md`, `portfolio.md`, `kontakt.md`)
+  - Layout/theme configuration via Jekyll config and supported assets
+- Keep compatibility with GitHub Pages’ supported Jekyll setup (avoid unsupported plugins).
+
+## Design source of truth
+- The directory `design/` contains the design specification.
+- The file `design/DESIGN.md` describes the intended **design system** (colors, typography, spacing, components).
+- When implementing UI/styling, treat `design/DESIGN.md` as the **source of truth** and align site visuals with it.
+
+## Implementation guidance
+- Use the design tokens from `design/DESIGN.md` (colors/typography/spacing/radii) consistently across pages.
+- If you introduce styling changes, prefer a single coherent approach (e.g. site-wide CSS/Sass) rather than per-page hacks.
+

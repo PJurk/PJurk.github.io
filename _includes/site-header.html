@@ -1,0 +1,44 @@
+<header class="site-header" role="banner">
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav__inner">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        {{ site.title | default: site.github.repository_name | default: 'Studio Organic' }}
+      </a>
+
+      <div class="nav__links">
+        {%- assign is_home = page.url == '/' -%}
+        <a
+          class="nav__link {% if is_home %}is-active{% endif %}"
+          {% if is_home %}aria-current="page"{% endif %}
+          href="{{ '/' | relative_url }}"
+        >
+          Home
+        </a>
+
+        {%- assign header_paths = site.header_pages | default: empty -%}
+        {%- if header_paths and header_paths != empty -%}
+          {%- for path in header_paths -%}
+            {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title -%}
+              {%- assign is_active = false -%}
+              {%- if page.url == my_page.url -%}
+                {%- assign is_active = true -%}
+              {%- endif -%}
+              <a
+                class="nav__link {% if is_active %}is-active{% endif %}"
+                {% if is_active %}aria-current="page"{% endif %}
+                href="{{ my_page.url | relative_url }}"
+              >
+                {{ my_page.title | escape }}
+              </a>
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+      </div>
+
+      <div class="nav__cta">
+        <a class="btn btn--primary" href="{{ '/kontakt/' | relative_url }}">Napisz do mnie</a>
+      </div>
+    </div>
+  </nav>
+</header>

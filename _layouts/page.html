@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<header class="page-header">
+  <div class="container">
+    <h1 class="h2">{{ page.title | escape }}</h1>
+    {%- if page.description -%}
+      <p class="lead">{{ page.description }}</p>
+    {%- endif -%}
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <article class="prose card">
+      {{ content }}
+    </article>
+  </div>
+</section>

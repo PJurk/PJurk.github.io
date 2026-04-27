@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="pl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jan Kowalski - Digital Designer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#c5c9a7",
+                        "surface": "#fff8f3",
+                        "secondary-container": "#ffca98",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c2c9bb",
+                        "surface-tint": "#3b6934",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#42493e",
+                        "on-tertiary-fixed": "#1a1d07",
+                        "on-surface": "#1e1b17",
+                        "tertiary-container": "#4e5237",
+                        "primary-fixed": "#bcf0ae",
+                        "on-background": "#1e1b17",
+                        "on-secondary-fixed-variant": "#623f18",
+                        "on-error": "#ffffff",
+                        "primary": "#154212",
+                        "inverse-surface": "#33302b",
+                        "on-tertiary-container": "#c1c5a3",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e9e1da",
+                        "secondary-fixed": "#ffdcbd",
+                        "on-secondary-container": "#7a532a",
+                        "surface-bright": "#fff8f3",
+                        "on-primary-container": "#9dd090",
+                        "on-primary-fixed-variant": "#23501e",
+                        "surface-variant": "#e9e1da",
+                        "surface-container-high": "#eee7e0",
+                        "primary-fixed-dim": "#a1d494",
+                        "secondary-fixed-dim": "#f0bd8b",
+                        "secondary": "#7d562d",
+                        "primary-container": "#2d5a27",
+                        "outline": "#72796e",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#e1e6c2",
+                        "background": "#fff8f3",
+                        "on-primary-fixed": "#002201",
+                        "inverse-on-surface": "#f7efe8",
+                        "tertiary": "#373b22",
+                        "on-tertiary-fixed-variant": "#45492f",
+                        "surface-dim": "#e0d9d2",
+                        "surface-container": "#f4ede5",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#a1d494",
+                        "surface-container-low": "#faf2eb",
+                        "on-secondary-fixed": "#2c1600",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "48px",
+                        "lg": "24px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "md": "16px",
+                        "unit": "8px",
+                        "xs": "4px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased pt-24 selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 border-b border-stone-200/50 dark:border-stone-800/50 shadow-sm bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-md font-['Plus_Jakarta_Sans'] font-medium tracking-tight transition-all duration-300 ease-out">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<div class="text-xl font-bold tracking-tighter text-emerald-950 dark:text-emerald-50">Studio Organic</div>
+<div class="hidden md:flex space-x-8 items-center">
+<!-- Assuming "Work" is active for a portfolio landing context, or none. I'll make About active to show state -->
+<a class="text-emerald-700 dark:text-emerald-400 border-b-2 border-emerald-700 pb-1" href="#">About</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-200 transition-colors" href="#">Work</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-200 transition-colors" href="#">Services</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-emerald-900 dark:hover:text-emerald-200 transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm">
+                Let's Talk
+            </button>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-lg">
+<!-- Hero Section -->
+<section class="py-xl md:py-24 flex flex-col md:flex-row items-center gap-xl relative">
+<!-- Subtle decorative gradient behind text -->
+<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-surface-container-low to-transparent opacity-50 -z-10 rounded-full blur-3xl transform -translate-x-1/4 -translate-y-1/4"></div>
+<div class="flex-1 space-y-lg">
+<div class="inline-flex items-center gap-sm px-4 py-2 bg-surface-container rounded-full border border-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">Dostępny na nowe projekty</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface">
+                    Cześć, jestem <br/>
+<span class="text-primary-container">Jan Kowalski.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Projektuję intuicyjne, organiczne i pełne życia doświadczenia cyfrowe. Łączę minimalizm z funkcjonalnością, tworząc produkty, których chce się używać.
+                </p>
+<div class="flex flex-wrap gap-md pt-sm">
+<a class="inline-flex items-center justify-center bg-primary-container text-on-primary px-lg py-3 rounded-full font-label-md text-label-md shadow-[0_4px_14px_0_rgba(45,90,39,0.2)] hover:bg-primary transition-colors" href="#projekty">
+                        Zobacz moje prace
+                    </a>
+<a class="inline-flex items-center justify-center bg-surface-container text-on-surface px-lg py-3 rounded-full font-label-md text-label-md border border-outline-variant hover:bg-surface-container-high transition-colors" href="#kontakt">
+                        Kontakt
+                    </a>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="w-full aspect-square md:aspect-[4/5] rounded-[40px] overflow-hidden shadow-lg border-4 border-surface relative z-10 bg-surface-container-low">
+<img alt="" class="w-full h-full object-cover" data-alt="Portrait of a young creative professional man in a modern, warm lit studio environment, soft natural lighting, wearing a simple organic cotton shirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN7nDDp4VyvxGp8Py-eDZUlnFv6cwq9ZvXiRy0DneD3_NKAueerPuNUBLIy-vGu2Bb3QhhGSuEMmGJb41rLdBBTwwiIk21AH_qRD97LkPx7Rl2C1qJk_dmNkZPh2X2qiOjuQR6cXbq52aLyXUMDKgp0neKuSVuN91wJV41ypYDYawthHpsIvUSJD3Z-Uf62O4kVYBQ7lr3I3TAiYmoLoJD0_O4MUYhx3BbLdm7cAhvMkdRsp39rn5k58aR7rlA6kw9QKEYdcwQWg8"/>
+</div>
+</div>
+</section>
+<!-- About Section ("O mnie") -->
+<section class="py-xl" id="omnie">
+<div class="max-w-3xl mx-auto text-center space-y-md">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">O mnie</h2>
+<div class="w-16 h-1 bg-primary-container/30 mx-auto rounded-full"></div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Moja filozofia projektowania opiera się na zasadzie "Organic Sophistication". Wierzę, że oprogramowanie nie musi być chłodne i sterylne. Poprzez uważne operowanie typografią, przestrzenią i subtelnymi interakcjami, tworzę interfejsy, które wydają się być naturalnym przedłużeniem ludzkich intencji. Mam ponad 5 lat doświadczenia w pracy dla startupów i uznanych marek w całej Europie.
+                </p>
+</div>
+</section>
+<!-- Selected Projects ("Wybrane projekty") -->
+<section class="py-xl" id="projekty">
+<div class="flex items-end justify-between mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Wybrane projekty</h2>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container transition-colors hidden md:inline-flex items-center gap-xs" href="#">
+                    Wszystkie projekty <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Project Card 1 -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-surface-variant shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(45,90,39,0.08)] transition-all duration-300">
+<div class="h-64 sm:h-80 w-full overflow-hidden bg-surface-container-low">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Clean, modern web application interface displayed on a sleek laptop screen, sitting on a warm wooden desk with a small plant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE1eV-1-WOaRgWClMXEtfhbwOgP7OQs7ZBML8XiTolGyD7mYZxkZr9ymXTyBqmdyWXdcy-_4rOfArd4Un8f-k-fyGD0J43YLayQXRCwFeyeDp26ZHv_s91kbbMaURiDtBEJkWLtiEDHNSAekzXkqEOWx1Ml0Gn23G8dNRuSn8XQ3iIdwl8Jq_hC1aC6RG3y9_MLsTkY-TynNmuU10dIZAI8NH8Rc2subuAfLsU6y79JxiEnUGxaEEgUcg50eWC1TwruzK1sv105WY"/>
+</div>
+<div class="p-lg space-y-sm">
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full font-label-md text-xs">Fintech</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant rounded-full font-label-md text-xs">UX/UI</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Nova Banking App</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                            Re-design aplikacji mobilnej dla nowoczesnego banku. Skupienie na redukcji szumu kognitywnego i wprowadzeniu ciepłej palety barw.
+                        </p>
+</div>
+</article>
+<!-- Project Card 2 -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden border border-surface-variant shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(45,90,39,0.08)] transition-all duration-300">
+<div class="h-64 sm:h-80 w-full overflow-hidden bg-surface-container-low">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Minimalist e-commerce website design shown on an iPad leaning against a ceramic vase, soft warm morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChmxDLDYpfpULFpvflPx6pN9WXxYOuoUE6-T7k7MIT0712tyIkN8juYkVevPKee_7c8ToBfE8AS1D33IxMz8cv3XXAEcCSPBAO6gRmiP31xTD_676gcHTlZSWsBsoEmPeq2a0XYLsTMSjq13b_G8P7xCkWD2IfUftoUIiZkRgojEQ7xZrHBSy3YBic2bhC60tOCW1VdSALdyncJCIsE-N70qkeAfmlRr5Lu4aOQYOa3vVQ87coQLdDTJjIK5LNkvOPOSsQb9r53m8"/>
+</div>
+<div class="p-lg space-y-sm">
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full font-label-md text-xs">E-commerce</span>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant rounded-full font-label-md text-xs">Design System</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Lumina Store</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                            Kompleksowy system wizualny dla marki wnętrzarskiej premium. Wykorzystanie dużej ilości przestrzeni i subtelnej typografii.
+                        </p>
+</div>
+</article>
+</div>
+<div class="mt-lg text-center md:hidden">
+<a class="font-label-md text-label-md text-primary inline-flex items-center gap-xs" href="#">
+                    Wszystkie projekty <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Contact Section ("Zbudujmy coś razem") -->
+<section class="py-xl mb-xl" id="kontakt">
+<div class="bg-surface-container rounded-xl p-xl text-center shadow-sm border border-surface-variant/50 max-w-4xl mx-auto relative overflow-hidden">
+<!-- Abstract decorative shape inside the card -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary-fixed-dim/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 space-y-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Zbudujmy coś razem</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg mx-auto">
+                        Szukasz projektanta, który pomoże przenieść Twój produkt na wyższy poziom? Jestem otwarty na nowe zlecenia i współpracę.
+                    </p>
+<a class="inline-flex items-center justify-center bg-primary-container text-on-primary px-xl py-4 rounded-full font-headline-md text-[18px] shadow-md hover:bg-primary transition-colors hover:shadow-lg transform hover:-translate-y-0.5 duration-200" href="mailto:hello@jankowalski.design">
+                        Napisz do mnie
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full mt-20 border-t border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-900 font-['Plus_Jakarta_Sans'] text-sm text-stone-500 dark:text-stone-400 opacity-80 hover:opacity-100 transition-opacity">
+<div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="font-bold text-stone-900 dark:text-stone-100">
+                © 2024 Studio Organic. Built with intention.
+            </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-stone-500 hover:text-emerald-700 transition-colors hover:underline decoration-emerald-500/30 underline-offset-4" href="#">Instagram</a>
+<a class="text-stone-500 hover:text-emerald-700 transition-colors hover:underline decoration-emerald-500/30 underline-offset-4" href="#">LinkedIn</a>
+<a class="text-stone-500 hover:text-emerald-700 transition-colors hover:underline decoration-emerald-500/30 underline-offset-4" href="#">GitHub</a>
+<a class="text-stone-500 hover:text-emerald-700 transition-colors hover:underline decoration-emerald-500/30 underline-offset-4" href="#">Dribbble</a>
+</div>
+</div>
+</footer>
+</body></html>

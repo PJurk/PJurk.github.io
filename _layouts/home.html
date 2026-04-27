@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <div class="badge">
+        <span class="badge__dot" aria-hidden="true"></span>
+        <span class="badge__text">Dostępny na nowe projekty</span>
+      </div>
+
+      <h1 class="h1">
+        {{ page.title | default: "Cześć" | escape }}
+      </h1>
+
+      <p class="lead">
+        {{ site.description | default: "Projektuję nowoczesne, organiczne doświadczenia cyfrowe. Łączę minimalizm z funkcjonalnością, dbając o wydajność i detale." }}
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="{{ '/portfolio/' | relative_url }}">Zobacz moje prace</a>
+        <a class="btn btn--secondary" href="{{ '/kontakt/' | relative_url }}">Kontakt</a>
+      </div>
+    </div>
+
+    <div class="hero__visual" aria-hidden="true">
+      <div class="hero__card">
+        <div class="hero__photo"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article class="prose card">
+      {{ content }}
+    </article>
+  </div>
+</section>
