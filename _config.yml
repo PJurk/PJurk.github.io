@@ -1,0 +1,18 @@
+title: "Patryk Jurk"
+description: "Strona-wizytówka i portfolio"
+url: "https://pjurk.github.io"
+baseurl: ""
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+header_pages:
+  - portfolio.md
+  - kontakt.md
+
+minima:
+  skin: auto
+
